@@ -3,8 +3,12 @@ import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 
 import store from './store'
-import App from './App'
+import { App } from './App'
 import reportWebVitals from './reportWebVitals'
+
+// setup fake backend
+import { configureFakeBackend } from './helpers'
+configureFakeBackend()
 
 render(
   <Provider store={store}>
